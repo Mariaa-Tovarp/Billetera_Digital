@@ -1,0 +1,143 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Fondo claro */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que la página ocupe toda la altura */
+}
+
+/* Cabecera */
+header {
+    background-color: #005bb5; /* Azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #ffcc00; /* Color de hover */
+}
+
+/* Formulario de creación de cuenta */
+h3 {
+    font-size: 2em;
+    color: #0073e6; /* Azul claro */
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1em;
+    background-color: #f9f9f9;
+}
+
+form input[type="submit"] {
+    background-color: #0073e6; /* Azul claro */
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+form input[type="submit"]:hover {
+    background-color: #005bb5; /* Azul oscuro */
+}
+
+/* Mensajes de error */
+.error {
+    color: #ff4d4d; /* Rojo */
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #005bb5;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Esto asegura que el footer esté al final */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+/* Contenedor para centrar el botón */
+.cerrar-sesion-container {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center; /* Centra el botón verticalmente */
+    height: auto; /* Quita la altura total de la ventana */
+    margin-top: 20px; /* Espacio superior adecuado */
+    margin-bottom: 30px; /* Espacio inferior */
+}
+
+/* Estilo para el botón Cerrar sesión */
+button.cerrar-sesion {
+    background-color: #005bb5; /* Azul oscuro */
+    color: white;
+    font-size: 1.2em; /* Tamaño de texto adecuado */
+    padding: 12px 24px; /* Padding adecuado */
+    border-radius: 8px; /* Bordes redondeados */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto; /* Tamaño automático */
+    display: inline-block;
+    text-align: center;
+}
+
+/* Efecto al pasar el ratón por encima */
+button.cerrar-sesion:hover {
+    background-color: #003f8f; /* Azul más oscuro */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Efecto al dar clic */
+button.cerrar-sesion:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 91, 181, 0.6); /* Resalta el botón al hacer clic */
+}

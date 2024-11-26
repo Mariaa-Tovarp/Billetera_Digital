@@ -1,0 +1,106 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Fondo claro */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que la página ocupe toda la altura */
+}
+
+/* Cabecera */
+header {
+    background-color: #005bb5; /* Azul oscuro */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header .tagline {
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+/* Sección principal */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7fc; /* Fondo suave */
+}
+
+.cta-section {
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+.cta-section h2 {
+    font-size: 2.5em;
+    color: #0073e6; /* Azul claro */
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cta-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-button {
+    background-color: #0073e6; /* Azul claro */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #005bb5; /* Azul oscuro */
+}
+
+/* Pie de página */
+footer {
+    background-color: #005bb5; /* Azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Esto asegura que el footer esté al final */
+}
+
+footer p {
+    font-size: 1em;
+    font-weight: lighter;
+}
+
