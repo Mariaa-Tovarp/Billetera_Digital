@@ -36,15 +36,28 @@
 
             // Mostrar gestión de cuenta y transacciones
             echo "<h3>Servicios</h3>";
-            
-            echo "<h4>Transacciones Realizadas</h4>";
+            echo '<div class="botones-container">';
+            echo '<button class="boton" onclick="window.location.href=\'envia.php\'">Enviar</button>';
+            echo '<button class="boton" onclick="window.location.href=\'consignar.php\'">Consignar</button>';
+            echo '<button class="boton" onclick="window.location.href=\'sacar.php\'">Sacar</button>';
+            echo '<button class="boton" onclick="window.location.href=\'pagos.php\'">Pagos Servicio</button>';
+            echo '<button class="boton" onclick="window.location.href=\'recargas.php\'">Recargas</button>';
+            echo '</div>';
 
-            // Consultar transacciones del cliente utilizando su teléfono en las tablas transacciones
-            $sql_transacciones = "SELECT transacciones.Cuenta_Destino , transacciones.Monto , transacciones.Descripcion , transacciones.Fecha_Transaccion FROM transacciones;";
+
+            // Consultar las transacciones asociadas al teléfono del cliente
+            $sql_transacciones = "
+            SELECT transacciones.Cuenta_Destino, transacciones.Monto, transacciones.Descripcion, transacciones.Fecha_Transaccion
+            FROM transacciones
+            INNER JOIN clientes ON clientes.Id_Cliente = transacciones.Id_Cliente  /* Relacionamos las tablas por Id_Cliente */
+            WHERE clientes.Telefono = ?";  // Filtrar por el teléfono del cliente
+
             $stmt_transacciones = $conn->prepare($sql_transacciones);
+            $stmt_transacciones->bind_param("s", $cliente['Telefono']); // Filtrar por el teléfono del cliente
             $stmt_transacciones->execute();
             $result_transacciones = $stmt_transacciones->get_result();
 
+            echo "<h4>Transacciones Realizadas</h4>";
 
             if ($result_transacciones->num_rows > 0) {
                 echo "<table>

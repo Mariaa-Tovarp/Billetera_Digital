@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Usamos Segoe UI para mantener la coherencia */
     background-color: #f4f7fc; /* Fondo claro */
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
 
 /* Cabecera */
 header {
-    background-color: #005bb5; /* Azul oscuro */
+    background-color: #3498db; /* Azul claro */
     color: white;
     text-align: center;
     padding: 40px 0;
@@ -41,7 +41,7 @@ header a:hover {
 /* Formulario de creación de cuenta */
 h3 {
     font-size: 2em;
-    color: #0073e6; /* Azul claro */
+    color: #2980b9; /* Azul medio */
     margin-bottom: 20px;
     font-weight: normal;
     text-align: center;
@@ -69,7 +69,7 @@ form input[type="password"] {
 }
 
 form input[type="submit"] {
-    background-color: #0073e6; /* Azul claro */
+    background-color: #2980b9; /* Azul medio */
     color: white;
     font-size: 1.2em;
     padding: 15px 30px;
@@ -81,7 +81,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #005bb5; /* Azul oscuro */
+    background-color: #3498db; /* Azul claro */
 }
 
 /* Mensajes de error */
@@ -93,11 +93,12 @@ form input[type="submit"]:hover {
 
 /* Pie de página */
 footer {
-    background-color: #005bb5;
+    background-color: #3498db; /* Azul claro */
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: auto; /* Esto asegura que el footer esté al final */
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer p {

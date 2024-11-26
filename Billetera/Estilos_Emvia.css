@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente consistente */
+    background-color: #f4f7fc; /* Blanco claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 10px;
+}
+
+/* Títulos */
+h3 {
+    color: #2980b9; /* Azul más oscuro */
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Tabla de transacciones */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd; /* Bordes suaves */
+}
+
+th {
+    background-color: #3498db; /* Azul */
+    color: white;
+}
+
+td {
+    background-color: #fafafa; /* Blanco grisáceo */
+    color: #333; /* Gris oscuro */
+}
+
+tr:nth-child(even) td {
+    background-color: #f2f2f2; /* Gris claro alternado */
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #2980b9; /* Azul más oscuro */
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fafafa; /* Fondo blanco grisáceo */
+}
+
+input[type="submit"] {
+    background-color: #2ecc71; /* Verde */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3498db; /* Azul */
+    color: white;
+}
+
+/* Mensajes de error y éxito */
+.error {
+    color: #e16162; /* Rojo coral */
+    background-color: #f8d7da;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.success {
+    color: #2ecc71; /* Verde */
+    background-color: #d4edda;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Botón de regresar */
+.regresar-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    background-color: #2ecc71; /* Verde */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.regresar-btn:hover {
+    background-color: #3498db; /* Azul */
+    color: white;
+}
+
+/* Párrafos */
+p {
+    font-size: 16px;
+    color: #333; /* Gris oscuro */
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    input[type="submit"], .regresar-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+}

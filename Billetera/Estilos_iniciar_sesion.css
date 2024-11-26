@@ -1,143 +1,236 @@
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fc; /* Fondo claro */
+/* Establecer un estilo base */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y fuente general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Asegura que la página ocupe toda la altura */
 }
 
 /* Cabecera */
 header {
-    background-color: #005bb5; /* Azul oscuro */
+    background-color: #3498db;
     color: white;
     text-align: center;
-    padding: 40px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #2980b9; /* Borde alrededor de la cabecera */
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 36px;
     margin: 0;
-    font-weight: bold;
 }
 
 header a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 16px;
     margin-top: 10px;
     display: inline-block;
-    transition: color 0.3s ease;
 }
 
-header a:hover {
-    color: #ffcc00; /* Color de hover */
-}
-
-/* Formulario de creación de cuenta */
-h3 {
-    font-size: 2em;
-    color: #0073e6; /* Azul claro */
-    margin-bottom: 20px;
-    font-weight: normal;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
     background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd; /* Borde gris claro alrededor del contenedor */
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
+/* Mensaje de éxito */
+.success {
+    color: #2ecc71;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Formulario de inicio de sesión */
+form {
+    margin-top: 20px;
+    font-size: 16px;
+    border: 2px solid #ddd; /* Borde gris claro alrededor del formulario */
+    padding: 20px;
     border-radius: 8px;
-    font-size: 1.1em;
-    background-color: #f9f9f9;
+}
+
+form h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+form input[type="text"], form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Borde alrededor de las entradas */
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
 }
 
 form input[type="submit"] {
-    background-color: #0073e6; /* Azul claro */
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
     color: white;
-    font-size: 1.2em;
-    padding: 15px 30px;
-    border-radius: 8px;
+    font-size: 18px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
+    border: 2px solid #2980b9; /* Borde alrededor del botón */
 }
 
 form input[type="submit"]:hover {
-    background-color: #005bb5; /* Azul oscuro */
+    background-color: #2980b9;
 }
 
-/* Mensajes de error */
-.error {
-    color: #ff4d4d; /* Rojo */
-    font-size: 1.1em;
+/* Enlaces */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
     margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Detalles del cliente */
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Botón de cerrar sesión */
+.cerrar-sesion-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cerrar-sesion {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: 2px solid #3498db; /* Borde alrededor del botón */
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.cerrar-sesion:hover {
+    background-color: #3498db;
+}
+
+/* Tabla de transacciones */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #ddd; /* Borde alrededor de la tabla */
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    border-right: 2px solid #ddd; /* Borde entre las celdas */
+}
+
+table td {
+    background-color: #fafafa;
+    color: #555;
+    border-right: 2px solid #ddd; /* Borde entre las celdas */
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
 }
 
 /* Pie de página */
 footer {
-    background-color: #005bb5;
-    color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: auto; /* Esto asegura que el footer esté al final */
+    margin-top: 40px;
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 2px solid #2980b9; /* Borde alrededor del pie de página */
 }
 
 footer p {
     margin: 0;
-    font-size: 1em;
-    font-weight: lighter;
 }
 
-/* Contenedor para centrar el botón */
-.cerrar-sesion-container {
+/* Contenedor para los botones */s
+.botones-container {
     display: flex;
-    justify-content: center; /* Centra el botón horizontalmente */
-    align-items: center; /* Centra el botón verticalmente */
-    height: auto; /* Quita la altura total de la ventana */
-    margin-top: 20px; /* Espacio superior adecuado */
-    margin-bottom: 30px; /* Espacio inferior */
+    gap: 20px; /* Espacio entre los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-top: 20px;
 }
 
-/* Estilo para el botón Cerrar sesión */
-button.cerrar-sesion {
-    background-color: #005bb5; /* Azul oscuro */
+/* Estilo de los botones */
+.boton {
+    padding: 12px 25px;
+    background-color: #3498db;
     color: white;
-    font-size: 1.2em; /* Tamaño de texto adecuado */
-    padding: 12px 24px; /* Padding adecuado */
-    border-radius: 8px; /* Bordes redondeados */
+    font-size: 18px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: auto; /* Tamaño automático */
-    display: inline-block;
     text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efecto al pasar el ratón por encima */
-button.cerrar-sesion:hover {
-    background-color: #003f8f; /* Azul más oscuro */
-    transform: scale(1.05); /* Efecto de aumento */
+.boton:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Efecto de elevación al pasar el cursor */
 }
 
-/* Efecto al dar clic */
-button.cerrar-sesion:focus {
-    outline: none;
-    box-shadow: 0 0 8px rgba(0, 91, 181, 0.6); /* Resalta el botón al hacer clic */
+.boton:active {
+    transform: translateY(2px); /* Efecto al hacer clic */
 }
